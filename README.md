@@ -24,19 +24,21 @@ yarn lint:fix # Fix lint issues automatically
 ```
 cypress
  ├── e2e
- |    └── home.cy.ts                 <- end 2 end tests for www.SorellaLabs.com/home
+ |    └── home.cy.ts                  <- end 2 end tests for www.SorellaLabs.com/home
 src
  ├── components
- │   └── home                        <- components for home
- │        ├── tests                  <- tests for home components
- │        │   ├── Footer.spec.tsx
- │        │   ├── Header.spec.tsx
- │        │   └── Layout.spec.tsx
- │        ├── Footer.tsx
- │        ├── Header.tsx
- │        ├── layout-config.tsx
- │        └── Layout.tsx
+ │    └── home                        <- components for home
+ │         ├── tests                  <- tests for home components
+ │         │    ├── Footer.spec.tsx
+ │         │    ├── Header.spec.tsx
+ │         │    └── Layout.spec.tsx
+ │         ├── Footer.tsx
+ │         ├── Header.tsx
+ │         ├── layout-config.tsx
+ │         └── Layout.tsx
+ ├── tests
+ │    └── home.spec.tsx              <- tests for home page
  └── pages
-      └── home
-           └── index.tsx             <- www.SorellaLabs.com/home
+      └── home.tsx                   <- www.SorellaLabs.com/home
+
 ```

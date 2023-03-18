@@ -1,4 +1,4 @@
-import { LinkType } from './layout';
+import { LinkType } from './Layout';
 
 export const HEADER_LINKS: LinkType[] = [
   {

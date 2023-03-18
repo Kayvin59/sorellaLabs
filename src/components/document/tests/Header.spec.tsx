@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 
 import Header from '../Header';
-import { LinkType } from '../layout';
+import { LinkType } from '../Layout';
 
 jest.mock('next/router', () => ({
   ...jest.requireActual('next/router'),

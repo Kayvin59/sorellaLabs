@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 
-import NotFoundPage from './index';
+import NotFoundPage from '../pages/404';
 
 jest.mock('next/router', () => ({
   ...jest.requireActual('next/router'),

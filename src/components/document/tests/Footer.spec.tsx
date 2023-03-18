@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 
-import { LinkType } from '@/components/document/layout';
+import { LinkType } from '@/components/document/Layout';
 
 import Footer from '../Footer';
 

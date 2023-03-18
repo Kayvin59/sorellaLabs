@@ -4,7 +4,7 @@ import React from 'react';
 
 import Button from '@/components/document/Button';
 
-import { LinkType } from './layout';
+import { LinkType } from './Layout';
 
 interface Props {
   links: LinkType[];

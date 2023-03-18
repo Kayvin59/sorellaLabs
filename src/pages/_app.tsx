@@ -3,7 +3,7 @@ import { AppProps } from 'next/app';
 
 import '@/styles/globals.css';
 
-import Layout from '@/components/document/layout';
+import Layout from '@/components/document/Layout';
 
 import { currentDappConfig } from '@/config';
 
