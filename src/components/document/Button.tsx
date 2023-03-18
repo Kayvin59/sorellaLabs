@@ -10,7 +10,7 @@ const Button = (props: Props) => {
   return (
     <button
       type='button'
-      className='rounded-full bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-4 text-white'
+      className='rounded-full bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white'
       onClick={onClick}
     >
       {children}

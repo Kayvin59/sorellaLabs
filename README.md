@@ -1,6 +1,25 @@
 # dApp
 
-### File Structure
+## Dev workflow
+
+### Common Commands
+
+```
+yarn install # Install dependencies
+yarn dev # Run frontend at http://localhost:3000
+yarn test # Run unit tests + coverage
+yarn lint:fix # Fix lint issues automatically
+```
+
+### Run E2E Tests
+
+1. [Install Cypress UI](https://docs.cypress.io/guides/getting-started/installing-cypress)
+1. Run `yarn run cypress open`
+1. Click E2E Testing
+
+---
+
+## File Structure
 
 ```
 cypress

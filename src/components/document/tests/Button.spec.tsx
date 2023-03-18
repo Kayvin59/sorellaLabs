@@ -24,7 +24,7 @@ describe('Button', () => {
     const { getByText } = render(<Button onClick={handleClick}>Click me!</Button>);
     const button = getByText('Click me!');
     expect(button).toHaveClass(
-      'rounded-full bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-4 text-white'
+      'rounded-full bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white'
     );
   });
 });

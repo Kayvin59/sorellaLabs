@@ -10,14 +10,14 @@ const defaultMeta = {
   description:
     'Sorella dynamically adjusts liquidity positions synchronously with the market’s evolution, maximizing market efficiency and yield.',
   /** Without additional '/' on the end, e.g. https://website.com */
-  url: '',
+  url: 'https://SorellaLabs.com',
   type: 'website',
   robots: 'follow, index',
   /**
    * No need to be filled, will be populated with openGraph function
    * If you wish to use a normal image, just specify the path below
    */
-  image: '',
+  image: 'https://SorellaLabs.com/image.png',
 };
 
 type SeoProps = {
@@ -31,7 +31,7 @@ export default function Seo(props: SeoProps) {
     ...defaultMeta,
     ...props,
   };
-  meta['title'] = props.templateTitle ? `${props.templateTitle} | ${meta.siteName}` : meta.title;
+  meta['title'] = props.templateTitle || meta.title;
 
   // Use siteName if there is templateTitle
   // but show full title if there is none
