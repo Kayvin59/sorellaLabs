@@ -6,7 +6,7 @@ export const smartCountractAdminAddresses = ['0x3D9F8E1602a0b0A5A398a75d6A9DaF60
 
 export const LocalhostChain: Chain = {
   chainId: 1281,
-  chainName: 'Moonbeam Localhost',
+  chainName: 'Localhost',
   isTestChain: true,
   isLocalChain: true,
   multicallAddress: '0x0000000000000000000000000000000000000000',
@@ -16,8 +16,8 @@ export const LocalhostChain: Chain = {
   rpcUrl: 'http://127.0.0.1:9933',
   blockExplorerUrl: 'https://tutorialchain.etherscan.io',
   nativeCurrency: {
-    name: 'GLMR',
-    symbol: 'GLMR',
+    name: 'ETH',
+    symbol: 'ETH',
     decimals: 18,
   },
 };
@@ -34,10 +34,9 @@ export const chains: { [key: number]: Chain } = {
   [LocalhostChain.chainId]: LocalhostChain,
 };
 
-
 export const getDefaultChainId = (): number => {
   if (isProd || isDev) {
-    return Moonbeam.chainId;
+    return LocalhostChain.chainId;
   }
   return LocalhostChain.chainId;
 };

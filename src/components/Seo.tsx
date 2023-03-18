@@ -5,8 +5,8 @@ import { openGraph } from '@/lib/openGraph';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'Sorella Labs',
-  siteName: 'Sorella Labs',
+  title: 'Sorella',
+  siteName: 'Sorella',
   description:
     'Sorella dynamically adjusts liquidity positions synchronously with the market’s evolution, maximizing market efficiency and yield.',
   /** Without additional '/' on the end, e.g. https://website.com */

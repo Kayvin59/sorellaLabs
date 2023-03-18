@@ -1,0 +1,21 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+
+  // Fix eslint issues on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+
+  // Sort import statements
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+
+  // Code coverage
+  "jest.showCoverageOnLoad": true,
+  "jest.jestCommandLine": "yarn test --coverage --coverageReporters=\"text-summary\"",
+  "jest.coverageColors": {
+    "covered": "rgba(9, 156, 65, 0.4)",
+    "uncovered": "rgba(121, 31, 10, 0.4)",
+    "partially-covered": "rgba(235, 198, 52, 0.4)"
+  }
+}

@@ -10,7 +10,7 @@
     "lint:strict": "eslint --max-warnings=0",
     "typecheck": "tsc --noEmit",
     "test:watch": "jest --watch",
-    "test": "jest ./src",
+    "test": "jest --coverage --coverageReporters=\"text-summary\"",
     "format:watch": "prettier -w ./src",
     "format:check": "prettier -c ./src",
     "postbuild": "next-sitemap --config next-sitemap.config.js"

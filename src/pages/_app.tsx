@@ -3,12 +3,16 @@ import { AppProps } from 'next/app';
 
 import '@/styles/globals.css';
 
+import Layout from '@/components/document/layout';
+
 import { currentDappConfig } from '@/config';
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <DAppProvider config={currentDappConfig}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </DAppProvider>
   );
 }
