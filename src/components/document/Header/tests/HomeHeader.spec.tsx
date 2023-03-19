@@ -11,7 +11,7 @@ jest.mock('next/router', () => ({
   useRouter: jest.fn(),
 }));
 
-describe('Header component', () => {
+describe('HomeHeader component', () => {
   const mockLinks: LinkType[] = [
     { name: 'Link1', url: '/link1' },
     { name: 'Link2', url: '/link2' },
@@ -34,11 +34,11 @@ describe('Header component', () => {
     });
   });
 
-  it('navigates to Dapp page on button click', () => {
+  it('navigates to strategies page on button click', () => {
     const mockFn = jest.spyOn(window, 'open');
     const { getByText } = render(<HomeHeader links={mockLinks} />);
-    const launchButton = getByText('Launch App');
-    fireEvent.click(launchButton);
+    const launchAppButton = getByText('Launch App');
+    fireEvent.click(launchAppButton);
     expect(mockFn).toHaveBeenCalledWith('http://dapp.localhost/strategies');
   });
 });

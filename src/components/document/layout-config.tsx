@@ -3,7 +3,7 @@ export interface LinkType {
   name: string;
 }
 
-export const HEADER_LINKS: LinkType[] = [
+export const HOME_HEADER_LINKS: LinkType[] = [
   {
     url: '/',
     name: 'Home',
@@ -19,6 +19,13 @@ export const HEADER_LINKS: LinkType[] = [
   {
     url: '/team',
     name: 'Team',
+  },
+];
+
+export const DAPP_HEADER_LINKS: LinkType[] = [
+  {
+    url: '/strategies',
+    name: 'Strategies',
   },
 ];
 

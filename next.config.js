@@ -12,6 +12,8 @@ module.exports = {
   //   ],
   // },
 
+  basePath: '/home',
+
   // SVGR
   webpack(config) {
     config.module.rules.push({

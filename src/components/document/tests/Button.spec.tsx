@@ -27,7 +27,9 @@ describe('Button component', () => {
       </Button>
     );
     const button = getByText('Click me!');
-    expect(button).toHaveClass('rounded-lg bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white');
+    expect(button).toHaveClass(
+      'max-h-14 rounded-lg bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white'
+    );
   });
 
   it('renders rounded variant with proper className', () => {
@@ -39,7 +41,7 @@ describe('Button component', () => {
     );
     const button = getByText('Click me!');
     expect(button).toHaveClass(
-      'rounded-full bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white'
+      'max-h-14 rounded-full bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white'
     );
   });
 
@@ -47,6 +49,8 @@ describe('Button component', () => {
     const handleClick = jest.fn();
     const { getByText } = render(<Button onClick={handleClick}>Click me!</Button>);
     const button = getByText('Click me!');
-    expect(button).toHaveClass('rounded-lg bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white');
+    expect(button).toHaveClass(
+      'max-h-14 rounded-lg bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white'
+    );
   });
 });

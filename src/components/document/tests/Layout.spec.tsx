@@ -5,6 +5,11 @@ import { CurrentNetworkProvider } from '@/contexts/CurrentNetwork';
 
 import Layout from '../Layout';
 
+jest.mock('next/router', () => ({
+  ...jest.requireActual('next/router'),
+  useRouter: jest.fn().mockReturnValue({ asPath: '' }),
+}));
+
 describe('Layout component', () => {
   const mockChildren = <div data-testid='child'>Mock Children</div>;
 

@@ -20,10 +20,10 @@ const Button = (props: Props) => {
       type='button'
       className={clsxm([
         variant === ButtonVariant.Rounded && [
-          'rounded-full bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white',
+          'max-h-14 rounded-full bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white',
         ],
         variant === ButtonVariant.Square && [
-          'rounded-lg bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white',
+          'max-h-14 rounded-lg bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white',
         ],
       ])}
       onClick={onClick}

@@ -6,7 +6,7 @@ import Footer from '@/components/document/Footer';
 import { CurrentNetworkProvider } from '@/contexts/CurrentNetwork';
 
 import Header from './Header';
-import { FOOTER_LINKS, HEADER_LINKS } from './layout-config';
+import { FOOTER_LINKS } from './layout-config';
 
 interface Props {
   children: ReactNode;
@@ -18,7 +18,7 @@ const Layout = (props: Props) => {
   return (
     <CurrentNetworkProvider>
       <div className='flex h-full w-full flex-col py-4 px-6'>
-        <Header links={HEADER_LINKS} />
+        <Header />
         <div className='h-max w-full flex-auto overflow-y-scroll'>{children}</div>
         <ToastContainer
           position='bottom-right'
