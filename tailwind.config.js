@@ -57,11 +57,28 @@ module.exports = {
           },
         },
       },
+      borderRadius: {
+        xl: '2em',
+      },
+      zIndex: {
+        1: '1',
+        2: '2',
+        3: '3',
+        4: '4',
+        5: '5',
+        6: '6',
+        7: '7',
+      },
       animation: {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
       },
     },
   },
+  safelist: [
+    {
+      pattern: /z-(1|2|3|4|5|6|7|8|9)/,
+    },
+  ],
   plugins: [require('@tailwindcss/forms'), require('flowbite/plugin'), backfaceVisibility],
 };

@@ -2,15 +2,16 @@ import { fireEvent, render } from '@testing-library/react';
 import { useRouter } from 'next/router';
 import React from 'react';
 
+import { LinkType } from '@/components/document/layout-config';
+
 import Header from '../Header';
-import { LinkType } from '../Layout';
 
 jest.mock('next/router', () => ({
   ...jest.requireActual('next/router'),
   useRouter: jest.fn(),
 }));
 
-describe('Header', () => {
+describe('Header component', () => {
   const mockLinks: LinkType[] = [
     { name: 'Link1', url: '/link1' },
     { name: 'Link2', url: '/link2' },

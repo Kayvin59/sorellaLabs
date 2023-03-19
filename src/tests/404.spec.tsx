@@ -17,8 +17,8 @@ jest.mock('next/head', () => {
   };
 });
 
-describe('404 component', () => {
-  test('renders page title', () => {
+describe('404 page', () => {
+  it('renders page title', () => {
     render(<NotFoundPage />);
     // Exclude the non-title with the same text content
     const sorellaLabsElements = screen.getAllByText(/Not Found/i, { ignore: 'h1' });
@@ -26,12 +26,12 @@ describe('404 component', () => {
     expect(sorellaLabsElements[0]).toHaveTextContent(/Not Found/i);
   });
 
-  test('renders main content', () => {
+  it('renders main content', () => {
     const { getByRole } = render(<NotFoundPage />);
     expect(getByRole('main')).toBeInTheDocument();
   });
 
-  test('renders headline', () => {
+  it('renders headline', () => {
     render(<NotFoundPage />);
     // Exclude the title with the same text content
     const sorellaLabsElements = screen.getAllByText('Page Not Found');

@@ -86,3 +86,7 @@
     @apply h-full w-full overflow-hidden bg-sorella-background;
   }
 }
+
+.strategy-card-background {
+  background: linear-gradient(270deg, rgba(44, 19, 74, 1) 0%, rgba(15, 16, 45, 1) 50%, rgba(44, 19, 74, 1) 100%);
+}

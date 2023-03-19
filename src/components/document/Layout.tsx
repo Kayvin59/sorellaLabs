@@ -8,11 +8,6 @@ import { CurrentNetworkProvider } from '@/contexts/CurrentNetwork';
 import Header from './Header';
 import { FOOTER_LINKS, HEADER_LINKS } from './layout-config';
 
-export interface LinkType {
-  url: string;
-  name: string;
-}
-
 interface Props {
   children: ReactNode;
 }

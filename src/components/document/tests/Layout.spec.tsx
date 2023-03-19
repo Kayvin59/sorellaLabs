@@ -5,10 +5,10 @@ import { CurrentNetworkProvider } from '@/contexts/CurrentNetwork';
 
 import Layout from '../Layout';
 
-describe('Layout', () => {
+describe('Layout component', () => {
   const mockChildren = <div data-testid='child'>Mock Children</div>;
 
-  test('renders children', () => {
+  it('renders children', () => {
     const { getByTestId } = render(
       <CurrentNetworkProvider>
         <Layout>{mockChildren}</Layout>
@@ -17,7 +17,7 @@ describe('Layout', () => {
     expect(getByTestId('child')).toBeInTheDocument();
   });
 
-  test('renders Header component', () => {
+  it('renders Header component', () => {
     const { getByRole } = render(
       <CurrentNetworkProvider>
         <Layout>{mockChildren}</Layout>
@@ -26,7 +26,7 @@ describe('Layout', () => {
     expect(getByRole('banner')).toBeInTheDocument();
   });
 
-  test('renders Footer component', () => {
+  it('renders Footer component', () => {
     const { getByRole } = render(
       <CurrentNetworkProvider>
         <Layout>{mockChildren}</Layout>

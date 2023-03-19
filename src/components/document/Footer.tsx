@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-import { LinkType } from './Layout';
+import { LinkType } from '@/components/document/layout-config';
 
 interface Props {
   links: LinkType[];

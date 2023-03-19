@@ -1,10 +1,10 @@
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
 
-import Button from '../Button';
+import Button, { ButtonVariant } from '../Button';
 
-describe('Button', () => {
-  test('calls onClick prop when clicked', () => {
+describe('Button component', () => {
+  it('calls onClick prop when clicked', () => {
     const handleClick = jest.fn();
     const { getByText } = render(<Button onClick={handleClick}>Click me!</Button>);
     const button = getByText('Click me!');
@@ -12,19 +12,41 @@ describe('Button', () => {
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
-  test('renders children', () => {
+  it('renders children', () => {
     const handleClick = jest.fn();
     const { getByText } = render(<Button onClick={handleClick}>Click me!</Button>);
     const button = getByText('Click me!');
     expect(button).toBeInTheDocument();
   });
 
-  test('renders with proper className', () => {
+  it('renders square variant with proper className', () => {
     const handleClick = jest.fn();
-    const { getByText } = render(<Button onClick={handleClick}>Click me!</Button>);
+    const { getByText } = render(
+      <Button onClick={handleClick} variant={ButtonVariant.Square}>
+        Click me!
+      </Button>
+    );
+    const button = getByText('Click me!');
+    expect(button).toHaveClass('rounded-lg bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white');
+  });
+
+  it('renders rounded variant with proper className', () => {
+    const handleClick = jest.fn();
+    const { getByText } = render(
+      <Button onClick={handleClick} variant={ButtonVariant.Rounded}>
+        Click me!
+      </Button>
+    );
     const button = getByText('Click me!');
     expect(button).toHaveClass(
       'rounded-full bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white'
     );
+  });
+
+  it('renders default variant with proper className', () => {
+    const handleClick = jest.fn();
+    const { getByText } = render(<Button onClick={handleClick}>Click me!</Button>);
+    const button = getByText('Click me!');
+    expect(button).toHaveClass('rounded-lg bg-gradient-to-r from-sorella-purple to-sorella-pink px-10 py-3 text-white');
   });
 });

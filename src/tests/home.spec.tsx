@@ -17,8 +17,8 @@ jest.mock('next/head', () => {
   };
 });
 
-describe('Home component', () => {
-  test('renders page title', () => {
+describe('Home page', () => {
+  it('renders page title', () => {
     render(<Home />);
     // Exclude the non-title with the same text content
     const sorellaLabsElements = screen.getAllByText(/Sorella Labs/i, { ignore: 'div' });
@@ -26,12 +26,12 @@ describe('Home component', () => {
     expect(sorellaLabsElements[0]).toHaveTextContent(/Sorella Labs/i);
   });
 
-  test('renders main content', () => {
+  it('renders main content', () => {
     const { getByRole } = render(<Home />);
     expect(getByRole('main')).toBeInTheDocument();
   });
 
-  test('renders headline', () => {
+  it('renders headline', () => {
     render(<Home />);
     // Exclude the title with the same text content
     const sorellaLabsElements = screen.getAllByText(/Sorella Labs/i, { ignore: 'title' });
@@ -39,7 +39,7 @@ describe('Home component', () => {
     expect(sorellaLabsElements[0]).toHaveTextContent(/Sorella Labs/i);
   });
 
-  test('renders subheadline', () => {
+  it('renders subheadline', () => {
     const { getByText } = render(<Home />);
     expect(getByText('Experience the Future of liquidity Provision')).toBeInTheDocument();
   });

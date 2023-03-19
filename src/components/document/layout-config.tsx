@@ -1,4 +1,7 @@
-import { LinkType } from './Layout';
+export interface LinkType {
+  url: string;
+  name: string;
+}
 
 export const HEADER_LINKS: LinkType[] = [
   {
