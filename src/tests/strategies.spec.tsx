@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 
-import Strategies from '@/pages/strategies';
+import Strategies from '@/pages/dapp/strategies';
 
 jest.mock('next/router', () => ({
   ...jest.requireActual('next/router'),

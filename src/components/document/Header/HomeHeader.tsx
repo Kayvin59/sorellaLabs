@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import React from 'react';
 
 import Button, { ButtonVariant } from '@/components/document/Button';
@@ -11,7 +10,6 @@ interface Props {
 
 const HomeHeader = (props: Props) => {
   const { links } = props;
-  const router = useRouter();
 
   const renderLink = (link: LinkType) => {
     return (
@@ -30,7 +28,7 @@ const HomeHeader = (props: Props) => {
         <Button
           variant={ButtonVariant.Rounded}
           onClick={() => {
-            router.push('dapp');
+            window.open(`${window.location.protocol}//dapp.${window.location.host}/strategies`);
           }}
         >
           Launch App

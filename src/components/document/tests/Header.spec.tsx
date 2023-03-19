@@ -1,10 +1,10 @@
 import { fireEvent, render } from '@testing-library/react';
-import { useRouter } from 'next/router';
+import { shallow } from 'enzyme';
+import Link from 'next/link';
 import React from 'react';
 
+import HomeHeader from '@/components/document/Header/HomeHeader';
 import { LinkType } from '@/components/document/layout-config';
-
-import Header from '../Header';
 
 jest.mock('next/router', () => ({
   ...jest.requireActual('next/router'),
@@ -18,21 +18,27 @@ describe('Header component', () => {
     { name: 'Link3', url: '/link3' },
   ];
 
-  test('renders all the links', () => {
-    const { getByText } = render(<Header links={mockLinks} />);
+  it('renders all the links', () => {
+    const { getByText } = render(<HomeHeader links={mockLinks} />);
     mockLinks.forEach((link) => {
       expect(getByText(link.name)).toBeInTheDocument();
     });
   });
 
-  test('navigates to Dapp page on button click', () => {
-    const pushMock = jest.fn();
-    (useRouter as jest.Mock).mockReturnValue({
-      push: pushMock,
+  it('navigates to link on link click', () => {
+    const wrapper = shallow(<HomeHeader links={mockLinks} />);
+    const linkWrappers = wrapper.find(Link);
+    linkWrappers.forEach((linkWrapper, index) => {
+      expect(linkWrapper.prop('href')).toBe(mockLinks[index].url);
+      expect(linkWrapper.find('div').text()).toBe(mockLinks[index].name);
     });
-    const { getByText } = render(<Header links={mockLinks} />);
+  });
+
+  it('navigates to Dapp page on button click', () => {
+    const mockFn = jest.spyOn(window, 'open');
+    const { getByText } = render(<HomeHeader links={mockLinks} />);
     const launchButton = getByText('Launch App');
     fireEvent.click(launchButton);
-    expect(pushMock).toHaveBeenCalledWith('dapp');
+    expect(mockFn).toHaveBeenCalledWith('http://dapp.localhost/strategies');
   });
 });
