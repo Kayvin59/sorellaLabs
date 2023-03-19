@@ -12,7 +12,7 @@ module.exports = {
   //   ],
   // },
 
-  basePath: '/home',
+  basePath: '',
 
   // SVGR
   webpack(config) {

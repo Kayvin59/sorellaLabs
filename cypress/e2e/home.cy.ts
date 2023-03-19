@@ -46,9 +46,15 @@ describe('Home page', () => {
   });
 
   it('should launch the app when the "Launch App" button is clicked', () => {
+    cy.visit('/', {
+      onBeforeLoad(win) {
+        cy.stub(win, 'open');
+      },
+    });
+
     cy.get('button').contains('Launch App').click();
 
-    // Assert that the app has launched
+    cy.window().its('open').should('be.called');
   });
 
   it('should display the copyright text', () => {
