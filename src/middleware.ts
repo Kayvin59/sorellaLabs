@@ -39,7 +39,10 @@ export default async function middleware(req: NextRequest) {
 
   // rewrites for app pages
   if (currentHost == 'dapp') {
-    url.pathname = `/dapp${url.pathname}`;
+    if (!path.startsWith('/dapp')) {
+      url.pathname = `/dapp${path}`;
+    }
+
     return NextResponse.rewrite(url);
   }
 

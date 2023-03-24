@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import React, { ReactNode } from 'react';
 
 import Button, { ButtonVariant } from '@/components/document/Button';
@@ -7,7 +6,6 @@ import { Protocol, Strategy } from '@/components/strategies/strategies-config';
 
 const TrancheCard = (props: Strategy) => {
   const { name, tokensExposure, protocolsExposure, url } = props;
-  const router = useRouter();
 
   const renderTokenExposure = (token: Token, index: number, tokens: Token[]): ReactNode => {
     const zIndex = tokens.length - index;
@@ -47,7 +45,7 @@ const TrancheCard = (props: Strategy) => {
       <Button
         variant={ButtonVariant.Square}
         onClick={() => {
-          router.push(url);
+          window.open(url, '_self');
         }}
       >
         View

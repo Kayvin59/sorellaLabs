@@ -1,0 +1,375 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionDashboard component renders correctly 1`] = `
+<div
+  className="flex w-full flex-col items-center justify-center rounded-xl bg-card-background py-8"
+>
+  <div
+    className="mb-2 text-3xl text-white"
+  >
+    Transaction Dashboard
+  </div>
+  <div
+    className="mb-10 text-base font-light text-white/70"
+  >
+    A continuously updated table of transactions. To view more details for a specific transaction, click the transaction hash to visit its etherscan page
+  </div>
+  <Table
+    emptyRowMessage="No data."
+    header={
+      Object {
+        "items": Array [
+          "Block Number",
+          "Time",
+          "Transaction Hash",
+          "Tranche",
+          "Swaps",
+          "Deposit",
+          "Withdraw",
+        ],
+      }
+    }
+    headerClassName="h-[40px] uppercase p-10 text-center bg-gradient-to-r from-gradient-purple to-gradient-pink text-xs"
+    isLoading={false}
+    renderHeader={[Function]}
+    renderRow={[Function]}
+    rowClassName="h-[60px] p-10 border-b-[0.5px] border-white/50 text-center bg-table-background-grey font-light"
+    rows={
+      Array [
+        Object {
+          "items": Array [
+            0,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            1,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            2,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            3,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            4,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            5,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            6,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            7,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            8,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            9,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            10,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            11,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            12,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            13,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            14,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            15,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            16,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            17,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            18,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            19,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            20,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            21,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            22,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            23,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            24,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            25,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            26,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            27,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            28,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+        Object {
+          "items": Array [
+            29,
+            "20/12/2012, 04:00:00",
+            "0x1b9...5df6",
+            "0",
+            "Display Swaps",
+            "Display Deposits",
+            "Display Withdraw",
+          ],
+        },
+      ]
+    }
+    rowsPerPage={6}
+    tableClassName="border-collapse rounded overflow-hidden"
+  />
+</div>
+`;

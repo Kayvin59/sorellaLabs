@@ -14,6 +14,18 @@
 
   --tw-color-sorella-pink: 185 93 157;
   --color-sorella-pink: rgb(var(--tw-color-sorella-pink));
+
+  --tw-color-table-background-grey: 39 36 61;
+  --color-table-background-grey: rgb(var(--tw-color-table-background-grey));
+
+  --tw-color-gradient-purple: 95 43 125;
+  --color-gradient-purple: rgb(var(--tw-color-gradient-purple));
+
+  --tw-color-gradient-pink: 209 47 124;
+  --color-gradient-pink: rgb(var(--tw-color-gradient-pink));
+
+  --tw-color-card-background: 23 16 44;
+  --color-card-background: rgb(var(--tw-color-card-background));
 }
 
 @layer base {

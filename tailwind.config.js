@@ -26,6 +26,10 @@ module.exports = {
         'sorella-background': 'rgb(var(--tw-color-sorella-background) / <alpha-value>)',
         'sorella-purple': 'rgb(var(--tw-color-sorella-purple) / <alpha-value>)',
         'sorella-pink': 'rgb(var(--tw-color-sorella-pink) / <alpha-value>)',
+        'table-background-grey': 'rgb(var(--tw-color-table-background-grey) / <alpha-value>)',
+        'gradient-pink': 'rgb(var(--tw-color-gradient-pink) / <alpha-value>)',
+        'gradient-purple': 'rgb(var(--tw-color-gradient-purple) / <alpha-value>)',
+        'card-background': 'rgb(var(--tw-color-card-background) / <alpha-value>)',
       },
       transitionProperty: {
         width: 'width',

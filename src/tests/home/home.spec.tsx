@@ -41,6 +41,6 @@ describe('Home page', () => {
 
   it('renders subheadline', () => {
     const { getByText } = render(<Home />);
-    expect(getByText('Experience the Future of liquidity Provision')).toBeInTheDocument();
+    expect(getByText('Experience the Future of Liquidity Provision')).toBeInTheDocument();
   });
 });

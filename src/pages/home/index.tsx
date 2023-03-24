@@ -11,7 +11,7 @@ const Home = () => {
           <div className='flex h-full w-full justify-center'>
             <div className='mt-24 flex h-fit flex-col items-center'>
               <div className='block h-fit text-8xl text-white'>Sorella Labs</div>
-              <div className='text-3xl text-white'>Experience the Future of liquidity Provision</div>
+              <div className='text-3xl text-white'>Experience the Future of Liquidity Provision</div>
             </div>
           </div>
         </section>

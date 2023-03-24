@@ -1,15 +1,9 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { useRouter } from 'next/router';
 
 import { Token } from '@/components/icons/IconUtils';
 import { Protocol } from '@/components/strategies/strategies-config';
 
 import TrancheCard from '../TrancheCard';
-
-jest.mock('next/router', () => ({
-  ...jest.requireActual('next/router'),
-  useRouter: jest.fn(),
-}));
 
 describe('TrancheCard component', () => {
   const strategy = {
@@ -36,12 +30,10 @@ describe('TrancheCard component', () => {
   });
 
   it('navigates to the correct URL when the view button is clicked', () => {
-    const pushMock = jest.fn();
-    (useRouter as jest.Mock).mockReturnValue({
-      push: pushMock,
-    });
+    const mockFn = jest.spyOn(window, 'open');
+
     render(<TrancheCard {...strategy} />);
     fireEvent.click(screen.getByText('View'));
-    expect(pushMock).toHaveBeenCalledWith('/test-strategy');
+    expect(mockFn).toHaveBeenCalledWith('/test-strategy', '_self');
   });
 });
