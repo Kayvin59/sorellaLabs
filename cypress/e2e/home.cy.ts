@@ -18,7 +18,7 @@ describe('Home page', () => {
 
   it('should contain the hero texts', () => {
     cy.contains('Sorella Labs').should('be.visible');
-    cy.contains('Experience the Future of liquidity Provision').should('be.visible');
+    cy.contains('Optimised Liquidity, Coming Soon…').should('be.visible');
   });
 
   it('should navigate to the "Home" page', () => {

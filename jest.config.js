@@ -34,5 +34,8 @@ const customJestConfig = {
   },
 };
 
+// Snapshot have dates in Paris local time
+process.env.TZ = 'Europe/Paris';
+
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig);

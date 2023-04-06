@@ -38,6 +38,7 @@ const DappHeader = (props: Props) => {
         <div className='flex flex-row items-center justify-end'>
           <div className='flex items-center justify-end pr-10 font-bold'>{links.map(renderLink)}</div>
           <Button
+            gradient
             variant={ButtonVariant.Rounded}
             onClick={() => {
               console.log('Clicked');

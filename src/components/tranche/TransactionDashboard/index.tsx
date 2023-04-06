@@ -98,7 +98,7 @@ const TransactionDashboard = (props: Props) => {
   return (
     <div className='flex w-full flex-col items-center justify-center rounded-xl bg-card-background py-8'>
       <div className='mb-2 text-3xl text-white'>Transaction Dashboard</div>
-      <div className='mb-10 text-base font-light text-white/70'>
+      <div className='mb-10 text-base font-thin text-white/70'>
         A continuously updated table of transactions. To view more details for a specific transaction, click the
         transaction hash to visit its etherscan page
       </div>

@@ -1,30 +1,11 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 import Button, { ButtonVariant } from '@/components/document/Button';
-import { getTokenLogo, Token } from '@/components/icons/IconUtils';
-import { Protocol, Strategy } from '@/components/strategies/strategies-config';
+import { Strategy } from '@/components/strategies/strategies-config';
+import { renderProtocoleExposure, renderTokenExposure } from '@/components/strategies/utils';
 
 const TrancheCard = (props: Strategy) => {
   const { name, tokensExposure, protocolsExposure, url } = props;
-
-  const renderTokenExposure = (token: Token, index: number, tokens: Token[]): ReactNode => {
-    const zIndex = tokens.length - index;
-    return (
-      <div key={index} className={`m-[-3px] h-7 w-7 z-${zIndex}`}>
-        {getTokenLogo(token)}
-      </div>
-    );
-  };
-
-  const renderProtocoleExposure = (protocol: Protocol, index: number, protocols: Protocol[]): ReactNode => {
-    const isLastProtocole = index === protocols.length - 1;
-    return (
-      <div key={index} className='inline-block'>
-        {protocol}
-        {!isLastProtocole && <div className='mr-1 inline-block'>,</div>}
-      </div>
-    );
-  };
 
   return (
     <div
@@ -43,6 +24,7 @@ const TrancheCard = (props: Strategy) => {
         </div>
       </div>
       <Button
+        gradient
         variant={ButtonVariant.Square}
         onClick={() => {
           window.open(url, '_self');

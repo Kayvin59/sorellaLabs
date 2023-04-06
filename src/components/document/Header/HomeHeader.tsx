@@ -24,8 +24,9 @@ const HomeHeader = (props: Props) => {
   return (
     <header className='z-10 w-full pr-12'>
       <div className='flex w-full flex-row justify-between'>
-        <div className='flex w-[400px] items-center justify-between'>{links.map(renderLink)}</div>
+        <div className='flex w-[400px] items-center justify-between font-thin'>{links.map(renderLink)}</div>
         <Button
+          gradient
           variant={ButtonVariant.Rounded}
           onClick={() => {
             window.open(`${window.location.protocol}//dapp.${window.location.host}/strategies`);

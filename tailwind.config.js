@@ -19,7 +19,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ["'Nunito', sans-serif", ...fontFamily.sans],
+        primary: ["'Futura', sans-serif", ...fontFamily.sans],
         secondary: ["'Glacial Indifference', sans-serif", ...fontFamily.sans],
       },
       colors: {
@@ -33,6 +33,9 @@ module.exports = {
       },
       transitionProperty: {
         width: 'width',
+      },
+      fontSize: {
+        '10xl': '10rem',
       },
       rotate: {
         270: '270deg',
@@ -62,7 +65,8 @@ module.exports = {
         },
       },
       borderRadius: {
-        xl: '2em',
+        xl: '1.3em',
+        '2xl': '2em',
       },
       zIndex: {
         1: '1',
