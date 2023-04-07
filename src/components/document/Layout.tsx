@@ -17,9 +17,9 @@ const Layout = (props: Props) => {
 
   return (
     <CurrentNetworkProvider>
-      <div className='flex h-full w-full flex-col py-4 px-6'>
+      <div className='flex h-full w-full flex-col px-6'>
         <Header />
-        <div className='h-max w-full flex-auto overflow-y-scroll'>{children}</div>
+        <div className='h-max w-full flex-auto'>{children}</div>
         <ToastContainer
           position='bottom-right'
           autoClose={4000}

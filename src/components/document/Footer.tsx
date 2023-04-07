@@ -24,7 +24,7 @@ const Footer = (props: Props) => {
     <footer className='z-10 w-full pr-12'>
       <div className='flex w-full flex-row justify-between '>
         <div className='text-white/20'>&copy; {new Date().getFullYear()} Sorella Labs&#8482;. All Rights Reserved.</div>
-        <div className='flex w-[300px] items-center justify-between'>{links.map(renderLink)}</div>
+        <div className='flex w-[300px] items-center justify-between font-thin'>{links.map(renderLink)}</div>
       </div>
     </footer>
   );

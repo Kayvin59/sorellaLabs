@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Seo from '@/components/Seo';
 import { STRATEGIES } from '@/components/strategies/strategies-config';
 import TrancheCard from '@/components/strategies/TrancheCard';
 
 const Strategies = () => {
+  const [windowHeight, setWindowHeight] = useState(1000);
+  const offset = 170; // offset to compensate for height of header and footer
+
+  useEffect(() => {
+    const getWindowHeight = () => {
+      if (typeof window !== 'undefined') {
+        setWindowHeight(window.innerHeight - offset);
+      }
+    };
+    getWindowHeight();
+  }, []);
+
   return (
     <>
       <Seo templateTitle='Strategies' />
-      <main className='h-full w-full'>
+      <main className='w-full' style={{ height: `${windowHeight}px` }}>
         <section className='flex h-full w-full items-center justify-center'>
           <div className='flex h-full w-full flex-col items-center justify-center'>
             <div className='flex h-fit flex-col items-center'>

@@ -26,7 +26,7 @@ const DappHeader = (props: Props) => {
   };
 
   return (
-    <header className='z-10 w-full pr-12'>
+    <header className='z-10 w-full py-4 pr-12'>
       <div className='flex w-full flex-row items-start justify-between'>
         <div className='text-8xl font-bold text-white'>
           <Link href={getHomeUrl()}>
