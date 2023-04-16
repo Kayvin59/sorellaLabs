@@ -21,7 +21,7 @@ const index = (props: Props) => {
         <DescriptionInfoCard description='' />
       </div>
       <div className='row-span-3'>
-        <PositionInfoCard underlying='' vaultTokens={strategy.tokensExposure} />
+        <PositionInfoCard underlying='' strategy={strategy} />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button, { ButtonVariant } from '@/components/document/Button';
+import Button, { ButtonGradientVariant, ButtonVariant } from '@/components/document/Button';
 import { Strategy } from '@/components/strategies/strategies-config';
 import { renderProtocoleExposure, renderTokenExposure } from '@/components/strategies/utils';
 
@@ -24,7 +24,7 @@ const TrancheCard = (props: Strategy) => {
         </div>
       </div>
       <Button
-        gradient
+        gradient={ButtonGradientVariant.Gradient1}
         variant={ButtonVariant.Square}
         onClick={() => {
           window.open(url, '_self');

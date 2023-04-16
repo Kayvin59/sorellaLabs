@@ -21,14 +21,16 @@ yarn lint:fix # Fix lint issues automatically
 
 ## File Structure
 
+The file structure in this repo follows the nextjs folder structure, where every file inside /pages becomes a route. Let's take /home as an example:
+
 ```
 cypress
  ├── e2e
- |    └── home.cy.ts                  <- end 2 end tests for www.SorellaLabs.com/home
+ |    └── home.cy.ts                  <- end 2 end tests for /home
 src
  ├── components
- │    └── home                        <- components for home
- │         ├── tests                  <- tests for home components
+ │    └── home                        <- components for /home
+ │         ├── tests                  <- tests for /home components
  │         │    ├── Footer.spec.tsx
  │         │    ├── Header.spec.tsx
  │         │    └── Layout.spec.tsx
@@ -37,8 +39,9 @@ src
  │         ├── layout-config.tsx
  │         └── Layout.tsx
  ├── tests
- │    └── home.spec.tsx              <- tests for home page
+ │    └── home.spec.tsx              <- tests for /home page
  └── pages
-      └── home.tsx                   <- www.SorellaLabs.com/home
-
+      └── home.tsx                   <-  /home with full url becomes www.sorellalabs.xyz/home
 ```
+
+Note: the pages insde the /dapp folder get mapped to the following url: www.dapp.sorellalabs/

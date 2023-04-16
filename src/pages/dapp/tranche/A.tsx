@@ -6,7 +6,7 @@ import InfoCards from '@/components/tranche/InfoCards';
 import TransactionDashboard from '@/components/tranche/TransactionDashboard';
 
 const TrancheA = () => {
-  const strategyA = STRATEGIES[0];
+  const strategyA = STRATEGIES.A;
 
   return (
     <>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-import Button, { ButtonVariant } from '@/components/document/Button';
+import Button, { ButtonGradientVariant, ButtonVariant } from '@/components/document/Button';
 import { LinkType } from '@/components/document/layout-config';
 
 interface Props {
@@ -38,7 +38,7 @@ const DappHeader = (props: Props) => {
         <div className='flex flex-row items-center justify-end'>
           <div className='flex items-center justify-end pr-10 font-bold'>{links.map(renderLink)}</div>
           <Button
-            gradient
+            gradient={ButtonGradientVariant.Gradient1}
             variant={ButtonVariant.Rounded}
             onClick={() => {
               console.log('Clicked');

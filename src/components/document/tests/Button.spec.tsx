@@ -1,7 +1,7 @@
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
 
-import Button, { ButtonVariant } from '../Button';
+import Button, { ButtonGradientVariant, ButtonVariant } from '../Button';
 
 describe('Button component', () => {
   it('calls onClick prop when clicked', () => {
@@ -51,7 +51,7 @@ describe('Button component', () => {
   it('renders gradiant with proper className', () => {
     const handleClick = jest.fn();
     const { getByText } = render(
-      <Button gradient onClick={handleClick}>
+      <Button gradient={ButtonGradientVariant.Gradient1} onClick={handleClick}>
         Click me!
       </Button>
     );

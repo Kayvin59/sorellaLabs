@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import Button, { ButtonVariant } from '@/components/document/Button';
-import { Token } from '@/components/icons/IconUtils';
+import Button, { ButtonGradientVariant, ButtonVariant } from '@/components/document/Button';
+import { Strategy } from '@/components/strategies/strategies-config';
 import { renderTokenExposure } from '@/components/strategies/utils';
+import DepositPopUp from '@/components/tranche/PopUps/DepositPopUp';
+import WithdrawPopUp from '@/components/tranche/PopUps/WithdrawPopUp';
 
 interface Props {
   underlying: string;
-  vaultTokens: Token[];
+  strategy: Strategy;
 }
 const PositionInfoCard = (props: Props) => {
-  const { underlying, vaultTokens } = props;
+  const { underlying, strategy } = props;
+  const [isDepositPopUpOpen, setIsDepositPopUpOpen] = useState(false);
+  const [isWithdrawPopUpOpen, setIsWithdrawPopUpOpen] = useState(false);
 
   return (
     <div className='flex h-full w-full flex-col items-center justify-center rounded-xl bg-card-background py-4 px-12 text-white'>
@@ -21,14 +25,14 @@ const PositionInfoCard = (props: Props) => {
         </div>
         <div className='flex min-h-[100px] flex-col items-center justify-start'>
           <div className='text-white/70'>Vault Tokens</div>
-          <div className='mt-4 flex flex-row'>{vaultTokens.map(renderTokenExposure)}</div>
+          <div className='mt-4 flex flex-row'>{strategy.tokensExposure.map(renderTokenExposure)}</div>
         </div>
         <div className='flex flex-col'>
           <Button
             variant={ButtonVariant.Square}
-            gradient
+            gradient={ButtonGradientVariant.Gradient1}
             onClick={() => {
-              console.log('clicked');
+              setIsDepositPopUpOpen(true);
             }}
           >
             Deposit
@@ -37,13 +41,15 @@ const PositionInfoCard = (props: Props) => {
             className='mt-4 bg-black'
             variant={ButtonVariant.Square}
             onClick={() => {
-              console.log('clicked');
+              setIsWithdrawPopUpOpen(true);
             }}
           >
             Withdraw
           </Button>
         </div>
       </div>
+      <DepositPopUp strategy={strategy} show={isDepositPopUpOpen} onClose={() => setIsDepositPopUpOpen(false)} />
+      <WithdrawPopUp strategy={strategy} show={isWithdrawPopUpOpen} onClose={() => setIsWithdrawPopUpOpen(false)} />
     </div>
   );
 };

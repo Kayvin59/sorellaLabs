@@ -18,14 +18,14 @@ export interface Strategy {
   url: string;
 }
 
-export const STRATEGIES: Strategy[] = [
-  {
+export const STRATEGIES: { [any: string]: Strategy } = {
+  A: {
     name: 'Tranche A',
     tokensExposure: [Token.USDC, Token.USDT, Token.DAI],
     protocolsExposure: [Protocol.UniswapV2, Protocol.UniswapV3, Protocol.Curve],
     url: 'tranche/A',
   },
-  {
+  B: {
     name: 'Tranche B',
     tokensExposure: [Token.USDC, Token.USDT, Token.DAI],
     protocolsExposure: [
@@ -38,7 +38,7 @@ export const STRATEGIES: Strategy[] = [
     ],
     url: 'tranche/B',
   },
-  {
+  C: {
     name: 'Tranche C',
     tokensExposure: [Token.USDC, Token.USDT, Token.DAI],
     protocolsExposure: [
@@ -53,4 +53,4 @@ export const STRATEGIES: Strategy[] = [
     ],
     url: 'tranche/C',
   },
-];
+};

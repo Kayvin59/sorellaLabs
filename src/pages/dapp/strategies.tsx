@@ -28,14 +28,14 @@ const Strategies = () => {
                 </div>
               </div>
               <div className='mt-20 flex w-[1100px] flex-row justify-between'>
-                <TrancheCard {...STRATEGIES[0]} />
-                <TrancheCard {...STRATEGIES[1]} />
-                <TrancheCard {...STRATEGIES[2]} />
+                <TrancheCard {...STRATEGIES.A} />
+                <TrancheCard {...STRATEGIES.B} />
+                <TrancheCard {...STRATEGIES.C} />
               </div>
             </div>
           </div>
           <div className='absolute ml-[-20rem] mt-[-170px]  h-full w-full'>
-            <Image src={src} alt='' layout='fill' objectFit='cover' />
+            <Image src={src} alt='' layout='fill' objectFit='fill' />
           </div>
         </section>
       </main>

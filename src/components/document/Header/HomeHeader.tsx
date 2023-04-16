@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-import Button, { ButtonVariant } from '@/components/document/Button';
+import Button, { ButtonGradientVariant, ButtonVariant } from '@/components/document/Button';
 import { LinkType } from '@/components/document/layout-config';
 
 interface Props {
@@ -26,7 +26,7 @@ const HomeHeader = (props: Props) => {
       <div className='flex w-full flex-row justify-between'>
         <div className='flex w-[400px] items-center justify-between font-thin'>{links.map(renderLink)}</div>
         <Button
-          gradient
+          gradient={ButtonGradientVariant.Gradient1}
           variant={ButtonVariant.Rounded}
           onClick={() => {
             window.open(`${window.location.protocol}//dapp.${window.location.host.replace('www.', '')}/strategies`);
