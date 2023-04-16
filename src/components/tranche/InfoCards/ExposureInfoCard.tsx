@@ -15,7 +15,7 @@ const ExposureInfoCard = (props: Strategy) => {
         </div>
         <div className='flex flex-auto flex-col items-center justify-center'>
           <div className='text-white/70'>Protocols</div>
-          <div className='mt-3 text-center text-sm font-thin text-white/70'>
+          <div className='mt-3 max-w-[200px] text-center text-sm font-thin text-white/70'>
             {protocolsExposure.map(renderProtocoleExposure)}
           </div>
         </div>
