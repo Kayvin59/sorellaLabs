@@ -44,4 +44,4 @@ src
       └── home.tsx                   <-  /home with full url becomes www.sorellalabs.xyz/home
 ```
 
-Note: the pages insde the /dapp folder get mapped to the following url: www.dapp.sorellalabs/
+Note: the pages inside the /dapp folder get mapped to the following url: www.dapp.sorellalabs/
