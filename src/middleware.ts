@@ -46,5 +46,5 @@ export default async function middleware(req: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
-  return NextResponse.rewrite(new URL(`/home${path}`, req.url));
+  return NextResponse.rewrite(new URL(`${path}`, req.url));
 }
