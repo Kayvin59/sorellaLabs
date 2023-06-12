@@ -8,7 +8,6 @@
   - contains nothing currently, but this is where the SVG files should be located in the future.
 - Public
   - contains the images used for the main page, and strategies page
-- SRC
 
 # SRC/{PATH}
 
