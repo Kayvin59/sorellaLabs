@@ -1,0 +1,33 @@
+## General Tasks:
+
+1. **Change the Team link:** Replace the "Team" link in the top left corner of the landing page with a "Docs" link that redirects to a specific GitBook URL.
+
+2. **Hosting migration:** Transfer the domain name hosted on GoDaddy to Amazon Web Services (AWS) and ensure it points to the correct IP.
+   
+3. **Deployment strategy:** Implement a streamlined process for pushing updates to the website, with an automated procedure to run end-to-end tests after every update.
+
+
+## SVG Animations:
+
+ **Landing page animation:** Implement SVG-based animations for the entire first landing page. The SVG files are broken down into individual lines to create a modular animation effect. Key features of the animation include:
+ 
+- Lines should expand and shrink while keeping the knots or connection points fixed.
+- Lines should occasionally expand beyond the screen boundaries.
+- Beams of light should traverse the lines, symbolizing the movement of positions.
+
+**Scrolling animations:** Implement animations for the rest of the page (visible on scroll). Key features include:
+
+- Lines should appear to move like waves.
+- Beams of light should traverse these lines.
+- The light's movement should track the user's scrolling action, giving an impression of interaction.
+
+More specific details will be provided by the design team.
+
+## Launch App:
+
+6. **Coming soon page:** When users click on the "Launch App", they should be redirected to a "Coming Soon" page. This page should feature a progress bar or similar visual element that outlines the roadmap to launch.
+
+Please note that specific details regarding animations will be provided as they are finalized. Communication and collaboration with the designer are expected to ensure the animations are implemented according to specifications.
+
+
+
